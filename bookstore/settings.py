@@ -31,12 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'registration',
     'store',
 )
 
@@ -101,3 +103,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# REGISTRAtION
+ACCOUNT_ACTIVATION_DAYS = 2
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = '/store/'
+
+# EMAIL SETTINGS
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "akshatzala@gmail.com"
+EMAIL_HOST_PASSWORD = "wpgsrovqzmqlzgnx"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = "books@bookstore.com"
