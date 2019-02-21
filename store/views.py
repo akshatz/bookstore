@@ -9,6 +9,9 @@ def index(request):
 
 def store(request):
     count = Book.objects.all().count()
+    request.session ['location'] = "unknown"
+    if request.user.is_authenticated():
+        request.session['location'] = "Earth"
     context = {
         'count': count
     }
