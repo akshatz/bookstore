@@ -13,6 +13,6 @@ def store(request):
     if request.user.is_authenticated():
         request.session['location'] = "Earth"
     context = {
-        'count': count
+        'count': count,
     }
-    return render(request, 'store.html', context)
+    return render(request, 'base.html', context)
