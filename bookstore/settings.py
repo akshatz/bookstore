@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [ ]
 INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.admin',
+    'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
@@ -39,7 +40,7 @@ INSTALLED_APPS = (
     'registration',
     'bootstrap3',
     'bootstrap_themes',
-    'django.contrib.auth',
+    'compressor',
     'store',
 )
 
@@ -109,24 +110,28 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join (BASE_DIR, 'static/')
+COMPRESS_ENABLED = True
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
 
 # REGISTRATION
 ACCOUNT_ACTIVATION_DAYS = 7
 REGISTRATION_AUTO_LOGIN = True
-LOGIN_REDIRECT_URL = '/store/'
+LOGIN_REDIRECT_URL = '/store'
 
 # EMAIL SETTINGS
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_HOST = "smtp.gmail.com"
-#EMAIL_HOST_USER = "akshatzala@gmail.com"
-#EMAIL_HOST_PASSWORD = "ujhcmpnczxvrpgzz"
-EMAIL_HOST_USER = "akshatz1234@gmail.com"
-EMAIL_HOST_PASSWORD = "imrncqlckibmngfc"
+EMAIL_HOST_USER = "akshatzala@gmail.com"
+EMAIL_HOST_PASSWORD = "vlclzvkapulhvaaz"
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = "books@mysterybooks.com"
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-
-# SOCIAL AUTH -FACEBOOK
-SOCIAL_AUTH_FACEBOOK_KEY='195897084648799'
-SOCIAL_AUTH_FACEBOOK_SECRET='d621b4ee4b223e803f91c6a6b4fcc095'
+# SOCIAL AUTH :- Facebook Inc.
+SOCIAL_AUTH_FACEBOOK_KEY = '195897084648799'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'd621b4ee4b223e803f91c6a6b4fcc095'
