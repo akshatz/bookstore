@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'bootstrap_themes',
     'compressor',
     'store',
+    # 'social.apps.django_apps'
 )
 
 MIDDLEWARE_CLASSES = (

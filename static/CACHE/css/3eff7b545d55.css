@@ -101,11 +101,11 @@ img.bg {
 
 .panel-info > .panel-heading {
     background-color: #D8562B;
-    border-color: #D8562B;
+    border-color: #fff;
 }
 
 .panel-info {
-    border-color: #D8562B;
+    border-color: #ffffff;
 }
 
 .panel-title {

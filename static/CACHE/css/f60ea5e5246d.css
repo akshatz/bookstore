@@ -100,8 +100,8 @@ img.bg {
 }
 
 .panel-info > .panel-heading {
-    background-color: #D8562B;
-    border-color: #D8562B;
+    background-color: #ffffff;
+    border-color: #ffffff;
 }
 
 .panel-info {
@@ -109,7 +109,7 @@ img.bg {
 }
 
 .panel-title {
-    color: #e6e6e6;
+    color: #000000;
 }
 
 .loginbox {
